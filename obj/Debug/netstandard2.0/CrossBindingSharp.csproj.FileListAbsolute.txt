@@ -1,0 +1,9 @@
+C:\Users\thesk\OneDrive\Documents\FineDigital\Vibin\CrossBindingSharp\bin\Debug\netstandard2.0\CrossBindingSharp.deps.json
+C:\Users\thesk\OneDrive\Documents\FineDigital\Vibin\CrossBindingSharp\bin\Debug\netstandard2.0\CrossBindingSharp.dll
+C:\Users\thesk\OneDrive\Documents\FineDigital\Vibin\CrossBindingSharp\bin\Debug\netstandard2.0\CrossBindingSharp.pdb
+C:\Users\thesk\OneDrive\Documents\FineDigital\Vibin\CrossBindingSharp\obj\Debug\netstandard2.0\CrossBindingSharp.csprojResolveAssemblyReference.cache
+C:\Users\thesk\OneDrive\Documents\FineDigital\Vibin\CrossBindingSharp\obj\Debug\netstandard2.0\CrossBindingSharp.csproj.CoreCompileInputs.cache
+C:\Users\thesk\OneDrive\Documents\FineDigital\Vibin\CrossBindingSharp\obj\Debug\netstandard2.0\CrossBindingSharp.AssemblyInfoInputs.cache
+C:\Users\thesk\OneDrive\Documents\FineDigital\Vibin\CrossBindingSharp\obj\Debug\netstandard2.0\CrossBindingSharp.AssemblyInfo.cs
+C:\Users\thesk\OneDrive\Documents\FineDigital\Vibin\CrossBindingSharp\obj\Debug\netstandard2.0\CrossBindingSharp.dll
+C:\Users\thesk\OneDrive\Documents\FineDigital\Vibin\CrossBindingSharp\obj\Debug\netstandard2.0\CrossBindingSharp.pdb
