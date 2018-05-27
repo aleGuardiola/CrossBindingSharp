@@ -19,29 +19,30 @@ namespace CrossBindingSharp
 
         private void onPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            var actions = get[e.PropertyName];
-            var value = getPropValue(notifyObject, e.PropertyName);
+            try
+            {
+                var actions = get[e.PropertyName];
+                var value = getPropValue(notifyObject, e.PropertyName);
 
-            foreach (var action in actions)
-                try
-                {
+                foreach (var action in actions)
                     action(value);
-                }
-                catch { }
+            }
+            catch { }
         }
 
         public void TwoWay<T>(string name, string nameBinding, Action<T> get, Func<T> set)
         {
-            Func<object> f = () => set();
-            Action<object> a = (value) => get((T)value);
-            if (!this.get.ContainsKey(name))
-                this.get[name] = new List<Action<object>>();
-
-            this.get[name].Add(a);
-            this.set[nameBinding] = new KeyValuePair<string, Func<object>>(name, f);
-
             try
             {
+                Func<object> f = () => set();
+                Action<object> a = (value) => get((T)value);
+                if (!this.get.ContainsKey(name))
+                    this.get[name] = new List<Action<object>>();
+
+                this.get[name].Add(a);
+                this.set[nameBinding] = new KeyValuePair<string, Func<object>>(name, f);
+
+
                 a(getPropValue(notifyObject, name));
             }
             catch { }
@@ -49,15 +50,17 @@ namespace CrossBindingSharp
 
         public void OneWay<T>(string name, Action<T> get)
         {
-            Action<object> a = (value) => get((T)value);
-
-            if (!this.get.ContainsKey(name))
-                this.get[name] = new List<Action<object>>();
-
-            this.get[name].Add(a);
-
             try
             {
+                Action<object> a = (value) => get((T)value);
+
+                if (!this.get.ContainsKey(name))
+                    this.get[name] = new List<Action<object>>();
+
+                this.get[name].Add(a);
+
+
+
                 a(getPropValue(notifyObject, name));
             }
             catch { }
@@ -65,9 +68,9 @@ namespace CrossBindingSharp
 
         public void Notify(string nameBinding)
         {
-            var value = set[nameBinding];
             try
             {
+                var value = set[nameBinding];
                 var returnedValue = value.Value();
                 setPropValue(notifyObject, returnedValue, value.Key);
             }
